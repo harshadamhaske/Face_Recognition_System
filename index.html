@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection System</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Load Face API.js -->
+    <script defer src="face-api.min.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1>Real-Time Face Detection</h1>
+
+    <!-- Controls for Camera and Detection -->
+    <div class="button-container">
+        <button id="startCamera">Start Camera</button>
+        <button id="startDetection" disabled>Start Detection</button>
+    </div>
+
+    <!-- Video Container -->
+    <div class="container">
+        <video id="video" width="640" height="480" autoplay></video>
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <!-- Toggle Controls -->
+    <div class="controls">
+        <label><input type="checkbox" id="toggleDetection" checked> Face Detection</label>
+        <label><input type="checkbox" id="toggleLandmarks" checked> Landmarks</label>
+        <label><input type="checkbox" id="toggleExpressions" checked> Expressions</label>
+    </div>
+
+    <!-- Debugging Message -->
+    <p id="status">Waiting to start...</p>
+
+</body>
+</html>
